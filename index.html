@@ -21,29 +21,22 @@
     <!-- Header & Navigation -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
+            <a href="#" class="logo">
                 <span class="logo-conan"><i class="fa-solid fa-magnifying-glass"></i> CONAN</span>
                 <span class="logo-vs">VS</span>
                 <span class="logo-kid">KAITO KID <i class="fa-solid fa-hat-wizard"></i></span>
             </a>
             <nav class="nav-links">
-                <a href="#hero" class="active"><i class="fa-solid fa-house"></i> Trang Chủ</a>
-                <a href="#characters"><i class="fa-solid fa-users"></i> Nhân Vật</a>
-                <a href="#duels"><i class="fa-solid fa-masks-theater"></i> Cuộc Đối Đầu</a>
-                <a href="#gadgets"><i class="fa-solid fa-microchip"></i> Bảo Bối & Thấu Kính</a>
-                <a href="#quiz"><i class="fa-solid fa-brain"></i> Quiz Thử Tải</a>
+                <a href="#" class="nav-tab active" data-tab="hero"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+                <a href="#" class="nav-tab" data-tab="characters"><i class="fa-solid fa-users"></i> Nhân Vật</a>
+                <a href="#" class="nav-tab" data-tab="duels"><i class="fa-solid fa-masks-theater"></i> Cuộc Đối Đầu</a>
+                <a href="#" class="nav-tab" data-tab="gadgets"><i class="fa-solid fa-microchip"></i> Bảo Bối</a>
             </nav>
-            <div class="theme-toggle-wrapper">
-                <button id="themeToggle" class="btn-theme-toggle">
-                    <span class="mode-text">Chế độ: Cả Hai</span>
-                    <i class="fa-solid fa-repeat"></i>
-                </button>
-            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section">
+    <section id="hero" class="hero-section tab-content active">
         <div class="hero-bg">
             <div class="hero-half hero-conan">
                 <div class="hero-content">
@@ -51,7 +44,6 @@
                     <h1>EDOGAWA CONAN</h1>
                     <p class="tagline">"Sự thật luôn chỉ có một!"</p>
                     <p class="desc">Thần đồng phá án mang hình dáng học sinh tiểu học, luôn vạch trần mọi sự thật bóng tối bằng tư duy logic sắc bén.</p>
-                    <a href="#characters" class="btn btn-conan">Khám phá Conan <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="hero-vs-badge">
@@ -63,14 +55,13 @@
                     <h1>KAITO KID 1412</h1>
                     <p class="tagline">"Máy thu âm ghi lại âm thanh, ảo thuật gia tạo nên ước mơ!"</p>
                     <p class="desc">Siêu trộm hào hoa phong nhã, làm đảo lộn giới cảnh sát bằng những màn ảo thuật đỉnh cao và phong thái bí ẩn.</p>
-                    <a href="#characters" class="btn btn-kid">Khám phá Kaito Kid <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Characters Showcase Section -->
-    <section id="characters" class="section characters-section">
+    <section id="characters" class="section characters-section tab-content">
         <div class="container">
             <div class="section-title">
                 <h2>Hồ Sơ Nhân Vật</h2>
@@ -127,8 +118,8 @@
         </div>
     </section>
 
-    <!-- Famous Duels / Matches -->
-    <section id="duels" class="section duels-section">
+    <!-- Famous Duels -->
+    <section id="duels" class="section duels-section tab-content">
         <div class="container">
             <div class="section-title">
                 <h2>Các Cuộc Chạm Trán Kinh Điển</h2>
@@ -172,7 +163,7 @@
     </section>
 
     <!-- Gadgets Section -->
-    <section id="gadgets" class="section gadgets-section">
+    <section id="gadgets" class="section gadgets-section tab-content">
         <div class="container">
             <div class="section-title">
                 <h2>Kho Trang Bị & Bảo Bối</h2>
@@ -207,58 +198,12 @@
         </div>
     </section>
 
-    <!-- Interactive Quiz Section -->
-    <section id="quiz" class="section quiz-section">
-        <div class="container">
-            <div class="quiz-box">
-                <h2><i class="fa-solid fa-circle-question"></i> Trắc Nghiệm: Bạn Thuộc Phe Conan Hay Kaito Kid?</h2>
-                <p>Trả lời 3 câu hỏi nhanh dưới đây để khám phá tính cách của bạn nghiêng về Thám Tử hay Siêu Trộm!</p>
-
-                <div id="quizForm" class="quiz-form">
-                    <div class="quiz-question active" data-q="1">
-                        <h4>1. Bạn thích giải quyết vấn đề bằng cách nào?</h4>
-                        <div class="options">
-                            <label><input type="radio" name="q1" value="conan"> Tìm kiếm bằng chứng, phân tích logic chi tiết</label>
-                            <label><input type="radio" name="q1" value="kid"> Sử dụng sự sáng tạo, bất ngờ và phong thái tự tin</label>
-                        </div>
-                    </div>
-
-                    <div class="quiz-question" data-q="2">
-                        <h4>2. Phong cách ăn mặc yêu thích của bạn?</h4>
-                        <div class="options">
-                            <label><input type="radio" name="q2" value="conan"> Gọn gàng, thanh lịch, vest lịch sự hoặc đồ năng động</label>
-                            <label><input type="radio" name="q2" value="kid"> Nổi bật, quyến rũ với áo cape, mũ chóp và nơ đỏ</label>
-                        </div>
-                    </div>
-
-                    <div class="quiz-question" data-q="3">
-                        <h4>3. Báu vật quan trọng nhất với bạn là gì?</h4>
-                        <div class="options">
-                            <label><input type="radio" name="q3" value="conan"> Sự thật và công lý bảo vệ mọi người</label>
-                            <label><input type="radio" name="q3" value="kid"> Hảo cảm, sự tự do và nụ cười của khán giả</label>
-                        </div>
-                    </div>
-
-                    <div class="quiz-actions">
-                        <button id="btnQuizResult" class="btn btn-primary" onclick="calculateQuiz()">Xem Kết Quả <i class="fa-solid fa-sparkles"></i></button>
-                    </div>
-
-                    <div id="quizResult" class="quiz-result hidden">
-                        <!-- Output via JS -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
-            <p>&copy; 2026 Fanpage Detective Conan vs Kaito Kid. Được tạo bằng tình yêu dành cho Gosho Aoyama.</p>
-            <p>Sẵn sàng để tải lên <strong>GitHub Pages</strong>!</p>
+            <p>&copy; 2026 Fanpage Detective Conan vs Kaito Kid.</p>
             <div class="social-links">
                 <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="#"><i class="fa-solid fa-heart"></i> Fan Club</a>
             </div>
         </div>
     </footer>
