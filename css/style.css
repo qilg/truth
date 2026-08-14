@@ -37,7 +37,9 @@ body {
     padding: 0 20px;
 }
 
-/* Navbar */
+/* =========================================
+   Navbar & Navigation
+   ========================================= */
 .navbar {
     position: fixed;
     top: 0;
@@ -47,7 +49,7 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
 .nav-container {
@@ -60,26 +62,29 @@ body {
     text-decoration: none;
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .logo-conan { color: var(--conan-accent); }
-.logo-vs { color: var(--conan-red); margin: 0 5px; font-style: italic; }
+.logo-vs { color: var(--conan-red); margin: 0 4px; font-style: italic; }
 .logo-kid { color: var(--kid-white); text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
 
 .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .nav-links a {
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    padding: 6px 12px;
+    padding: 8px 12px;
     border-radius: 6px;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -87,7 +92,9 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Quản lý Ẩn/Hiện Tab */
+/* =========================================
+   Tab Management (Ẩn/Hiện Tab)
+   ========================================= */
 .tab-content {
     display: none !important;
 }
@@ -106,22 +113,24 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero Section */
+/* =========================================
+   Hero Section
+   ========================================= */
 .hero-section {
     min-height: 100vh;
-    padding-top: 70px;
+    padding-top: 60px;
 }
 
 .hero-bg {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 60px);
     position: relative;
 }
 
 .hero-half {
     flex: 1;
-    padding: 60px 30px;
+    padding: 60px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +138,7 @@ body {
 
 .hero-conan {
     background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-    border-right: 2px solid rgba(37, 99, 235, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-kid {
@@ -143,20 +152,20 @@ body {
     transform: translate(-50%, -50%);
     background: var(--conan-red);
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1rem;
     box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
     z-index: 10;
 }
 
-.hero-content { max-width: 450px; }
+.hero-content { max-width: 480px; text-align: center; }
 
 .badge {
     display: inline-block;
@@ -165,65 +174,101 @@ body {
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .badge-blue { background: rgba(37, 99, 235, 0.2); color: var(--conan-accent); border: 1px solid var(--conan-blue); }
 .badge-white { background: rgba(255, 255, 255, 0.1); color: var(--kid-white); border: 1px solid rgba(255, 255, 255, 0.4); }
 
-.hero-content h1 { font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 10px; }
-.tagline { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; color: var(--kid-gold); margin-bottom: 12px; }
-.desc { color: var(--text-muted); font-size: 0.9rem; }
+.hero-content h1 { font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 12px; letter-spacing: 1px; }
+.tagline { font-family: var(--font-serif); font-style: italic; font-size: 1.05rem; color: var(--kid-gold); margin-bottom: 12px; line-height: 1.5; }
+.desc { color: var(--text-muted); font-size: 0.85rem; }
 
-/* Section Shared */
-.section { padding: 100px 0 60px 0; }
+/* =========================================
+   Sections General
+   ========================================= */
+.section { padding: 90px 0 60px 0; }
 .section-title { text-align: center; max-width: 650px; margin: 0 auto 40px auto; }
 .section-title h2 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 8px; }
 .section-title p { color: var(--text-muted); font-size: 0.9rem; }
 
-/* Characters Section */
+/* =========================================
+   Characters Section
+   ========================================= */
 .characters-section { background-color: #0d1322; }
-.character-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.character-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
 .char-card { background-color: var(--bg-card); border-radius: 12px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.05); }
 .char-header { text-align: center; margin-bottom: 15px; }
-.char-avatar { width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+.char-avatar { width: 65px; height: 65px; border-radius: 50%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
 .avatar-conan { background: rgba(37, 99, 235, 0.2); color: var(--conan-accent); }
 .avatar-kid { background: rgba(124, 58, 237, 0.2); color: var(--kid-white); }
-.char-header h3 { font-family: var(--font-heading); font-size: 1.2rem; }
+.char-header h3 { font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 4px; }
 .char-role { font-size: 0.8rem; color: var(--text-muted); }
 .char-body ul { list-style: none; margin-bottom: 15px; }
-.char-body li { padding: 6px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.08); font-size: 0.85rem; color: #cbd5e1; }
+.char-body li { padding: 8px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.08); font-size: 0.85rem; color: #cbd5e1; }
 .char-quote { font-family: var(--font-serif); font-style: italic; background: rgba(0, 0, 0, 0.2); padding: 12px; border-radius: 6px; font-size: 0.85rem; color: var(--kid-gold); border-left: 3px solid var(--kid-gold); }
 
-/* Duels Timeline */
+/* =========================================
+   Duels Section Timeline
+   ========================================= */
 .duels-section { background-color: var(--bg-dark); }
 .duel-timeline { max-width: 800px; margin: 0 auto; position: relative; }
 .duel-timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 20px; width: 2px; background: rgba(255, 255, 255, 0.1); }
-.duel-item { position: relative; padding-left: 55px; margin-bottom: 30px; }
-.duel-badge { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--conan-blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; }
+.duel-item { position: relative; padding-left: 55px; margin-bottom: 25px; }
+.duel-badge { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--conan-blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; }
 .duel-item:nth-child(even) .duel-badge { background: var(--kid-purple); }
 .duel-content { background-color: var(--bg-card); padding: 18px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05); }
 .duel-content h3 { font-family: var(--font-heading); font-size: 1rem; color: white; margin-bottom: 6px; }
 .duel-desc { color: var(--text-muted); font-size: 0.85rem; }
 
-/* Gadgets Section */
+/* =========================================
+   Gadgets Section
+   ========================================= */
 .gadgets-section { background-color: #0b1120; }
-.gadget-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-.gadget-card { background: var(--bg-card); padding: 20px; border-radius: 8px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05); }
-.gadget-icon { font-size: 2rem; margin-bottom: 10px; }
+.gadget-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.gadget-card { background: var(--bg-card); padding: 22px 18px; border-radius: 8px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05); }
+.gadget-icon { font-size: 1.8rem; margin-bottom: 12px; }
 .icon-conan { color: var(--conan-accent); }
 .icon-kid { color: var(--kid-gold); }
 .gadget-card h3 { font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 8px; }
 .gadget-card p { color: var(--text-muted); font-size: 0.8rem; }
 
-/* Footer */
+/* =========================================
+   Footer
+   ========================================= */
 .footer { background-color: #090d16; padding: 25px 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-muted); font-size: 0.8rem; }
 .social-links { margin-top: 10px; }
 .social-links a { color: var(--text-light); text-decoration: none; }
 
-/* Mobile Responsive */
+/* =========================================
+   RESPONSIVE DESIGN (Tối ưu cho Điện Thoại & Tablet)
+   ========================================= */
 @media (max-width: 768px) {
+    /* Căn chỉnh Navbar */
+    .navbar { padding: 10px 0; }
     .nav-container { flex-direction: column; gap: 10px; }
-    .hero-bg { flex-direction: column; }
+    .logo { font-size: 1rem; }
+    .nav-links { width: 100%; justify-content: center; gap: 4px; }
+    .nav-links a { padding: 6px 10px; font-size: 0.8rem; }
+
+    /* Căn chỉnh Hero Section trên Điện thoại */
+    .hero-section { padding-top: 105px; min-height: auto; }
+    .hero-bg { flex-direction: column; min-height: auto; }
     .hero-half { padding: 40px 20px; }
+    .hero-conan { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .hero-vs-badge { top: auto; bottom: -23px; left: 50%; transform: translateX(-50%); }
+    .hero-content h1 { font-size: 1.8rem; }
+    .tagline { font-size: 0.95rem; }
+
+    /* Căn chỉnh các Section khác */
+    .section { padding: 60px 0 30px 0; }
+    .section-title { margin-bottom: 25px; }
+    .section-title h2 { font-size: 1.5rem; }
+
+    .character-grid { grid-template-columns: 1fr; }
+    .gadget-grid { grid-template-columns: 1fr; }
+    
+    .duel-item { padding-left: 45px; }
+    .duel-badge { width: 32px; height: 32px; font-size: 0.75rem; }
+    .duel-timeline::before { left: 15px; }
 }
